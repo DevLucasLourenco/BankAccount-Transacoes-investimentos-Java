@@ -25,7 +25,7 @@ public abstract class Banco {
     public void depositarDinheiro(double valor){
         double minimoValorDeposito = 2.0; // Deposito mínimo, visto que não será possível em nosso banco depositar somente com moedas
 
-        if ((this.conexao) && (valor > minimoValorDeposito)){
+        if ((this.conexao) && (valor >= minimoValorDeposito)){
             this.user.setDinheiro(this.user.getDinheiro() + valor);
             System.out.println("Valor em conta do usuário "+getUser().getNome()+": "+getUser().getDinheiro());
         }else{
